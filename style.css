@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --slightly-more-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-size: 15px;
+  height: 100vh;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  border: none;
+  width: 900px;
+  display: flex;
+  border-radius: 10px;
+  /* background-color:var(--dark-desaturated-blue); */
+  margin-bottom: 4rem;
+}
+.text-container {
+  /* border:2px solid rgb(245, 109, 109); */
+  display: flex;
+  flex-direction: column;
+  padding: 2.8rem;
+  justify-content: space-around;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 8px 0px 0px 8px;
+}
+.image-container {
+  /* border:1px solid rgb(245, 109, 109); */
+  border: none;
+  display: flex;
+  border-radius: 0px 8px 8px 0px;
+  /* width:380px; */
+  position: relative;
+}
+
+.image-container .active{
+    position: absolute;
+    display: flex;
+    border-radius: 0px 8px 8px 0px;
+    width: 430px;
+    height: 350px;
+    background-color:var(--soft-violet);
+    opacity:0.2;
+}
+.image-container .image {
+  display: flex;
+  border-radius: 0px 8px 8px 0px;
+  width: 430px;
+  height: 350px;
+  background: url("images/image-header-desktop.jpg"), var(--soft-violet);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  opacity:1;
+
+}
+
+/* .image-container .image img {
+    width: 430px;
+    height: 350px;
+    border-radius: inherit;
+  } */
+
+.text-container h1 {
+  /* border: 2px solid rgb(3, 41, 193); */
+  padding-right: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  width: 350px;
+}
+.text-container h1 > span {
+  color: var(--soft-violet);
+}
+.text-container p {
+  /* border: 2px solid rgb(3, 41, 193); */
+  width: 350px;
+  padding: 0 2rem 1rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: var(--slightly-more-transparent-white);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.text-container .achivements {
+  width: 300px;
+  /* border: 2px solid rgb(3, 41, 193); */
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  /* margin-top:1rem; */
+}
+
+.achivements section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 2px solid rgb(3, 41, 193); */
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.achivements section > span {
+  color: var(--slightly-transparent-white);
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 960px) {
+  main {
+    border: none;
+    width: 330px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: wheat;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    outline: none;
+  }
+  .image-container {
+    border-radius: 8px 8px 0px 0px;
+    border: none;
+  }
+  .image-container .active{
+    width: 330px;
+    height: 250px;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .image-container .image {
+    width: 330px;
+    height: 250px;
+    border-radius: 8px 8px 0px 0px;
+    border: none;
+    background: url("images/image-header-mobile.jpg"), var(--soft-violet);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+  }
+
+  .text-container {
+    border-radius: 0px 0px 8px 8px;
+    /* border: 2px solid white; */
+    text-align: center;
+    border: none;
+  }
+  .text-container h1 {
+    /* border: 2px solid rgb(198, 26, 26); */
+    width: 250px;
+    padding-right: 0rem;
+  }
+  .text-container p {
+    /* border: 2px solid rgb(198, 26, 26); */
+    width: 250px;
+    text-align: center;
+    padding: 0.1rem;
+    font-size: 0.9rem;
+  }
+
+  .text-container .achivements {
+    /* border: 2px solid rgb(198, 26, 26); */
+    width: 250px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .text-container .achivements section {
+    margin-top: 1.3rem;
+  }
+}
